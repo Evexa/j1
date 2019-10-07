@@ -65,3 +65,77 @@ console.log(isChecked && isClose); //оператор И
 console.log(isChecked || isClose); //оператор ИЛИ
 console.log(isChecked || !isClose); //оператор ИЛИ и !NOT
 
+if (2*4 == 8) {
+    console.log("Верно!")
+} else {
+    console.log("Неверно!")
+}
+
+let num = 50;
+
+if (num < 49) {
+    console.log('Неверно!') 
+} else if (num > 100) {
+    console.log('Много!')
+} else {
+    console.log('Верно!')
+}
+// тернарный оператор (в его работе 3 аргумента)
+(num == 50) ? console.log('Верно!') : console.log('Неверно!');
+
+switch (num) {
+    case num < 49:
+        console.log('Неверно!');
+        break;
+    case num > 100:
+        console.log('Много!')
+        break;
+    case num > 80:
+        console.log('Все еще много!');
+        break;
+    case 50: //проверка на соответсвие значению т.е. 50 == 50
+        console.log('Верно!');
+        break;
+    default: //выполняется когда ни одно условие не верно
+        console.log('Что-то пошло не так!');
+        break;
+}
+
+//цикл while
+let numa = 50;
+// while (numa < 55) { // пока переменная num < 55 цикл будет выполнять действия
+//    console.log(numa);
+//    numa++;
+//}
+
+do {
+    console.log(numa);
+    numa++;
+}
+while (numa < 55);
+
+for (let i = 1; i < 8; i++) { // 0, undefind, null, пустая строка == false, все остальное true
+    if (i == 6) {
+        continue; //or continue Для продолжения цикла но с пропуском условия if т.е. 6
+    }
+    console.log(i);
+}
+
+let i = 1
+do {
+    console.log(i);
+    i++;
+    if (i == 6) {
+        continue;
+    }
+}
+while (i < 8);
+
+let i = 1;
+while (i < 8) {
+    console.log(i);
+    i++;
+    if (i == 6) {
+        break;
+    }
+}

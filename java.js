@@ -1,6 +1,6 @@
 'use strict';
 
-
+/*
 var leftBorderWidth = 4;
 let second = 2;
 const pi = 3.14;
@@ -121,7 +121,6 @@ for (let i = 1; i < 8; i++) { // 0, undefind, null, пустая строка ==
     console.log(i);
 }
 
-let i = 1
 do {
     console.log(i);
     i++;
@@ -130,8 +129,7 @@ do {
     }
 }
 while (i < 8);
-
-let i = 1;
+//let i = 1;
 while (i < 8) {
     console.log(i);
     i++;
@@ -139,3 +137,101 @@ while (i < 8) {
         break;
     }
 }
+*/
+// Функции
+
+/*function showFristMessage(text) {
+    alert(text);
+}
+
+showFristMessage("Hello World") */
+
+/*function showFristMessage(text) {
+    alert(text);
+    let num = 20; // локальная переменная
+}
+
+showFristMessage("Hello World")
+console.log(num); // ее не будет видно т.к. она локальная и обьявлена внутри ф-ции. */
+
+/*let num = 20; // создана глобальная переменная за пределами ф-ции
+function showFristMessage(text) {
+    alert(text);
+    num = 10; // обращение к глобальной переменной
+}
+
+showFristMessage("Hello World")
+console.log(num); */
+
+// let num = 20; // создана глобальная переменная за пределами ф-ции
+// function showFristMessage(text) {
+//     alert(text);
+//     let num = 10; // создана локальная переменная, замыкание ф-ции, если удалить эту
+// //строчку то консоль выведет значение глобальной переменной num
+//     console.log(num);
+// }
+
+// showFristMessage("Hello World")
+// console.log(num);
+
+// function calc(a,b) { // - function declaration - ф-ция обьявленная в потоке кода, 
+//     //функция обьявленная до начала кода, ее можно вызывать до обьявления
+//     return (a + b);
+// }
+
+// console.log(calc(3,4));
+// console.log(calc(8,3)); // если переставить эти вызовы в начала кода, то ничего не поменяется
+
+// function retVar() {
+//     let num = 50;
+//     return num;
+// }
+
+// let anotherNum = retVar();
+// console.log(anotherNum);
+
+
+// let calc  = function(a,b) { // function expretion - функциональное выражение, 
+//     // создается когда код до нее доходит
+//     return (a + b);
+// }
+// console.log(calc(3,4)); // если поставить перед ф-цией будет ошибка
+
+// function retVar() {
+//     let num = 50;
+//     return num;
+// }
+
+// let anotherNum = retVar();
+// console.log(anotherNum);
+
+let calc = (a,b) => a+b // стрелочная ф-ция, не имеет своего контекста вызова
+
+console.log(calc(5,4));
+console.log(calc(8,4));
+
+function retVar() {
+    let num = 48;
+    return num;
+}
+
+let anotherNum = retVar();
+console.log(anotherNum);
+
+// методы - вспомогательные ф-ции, свойства - вспомогательные значения
+
+let str = "test";
+console.log(str.length); // св-во lenght выводит длинну строки или др. типов данных
+
+console.log(str.toUpperCase()); // методы позволяют изменять содержимое в данном случае переменной
+console.log(str.toLowerCase());
+
+let twelve = "12.2";
+console.log(Math.round(twelve)); // команда округления 
+
+let twelve = "12.2px";
+console.log(parseInt(twelve)); /* команда перевода чисел в другю систему исчисления
+(двоичную, десятичную и т.д.) 
+нужно указывать в какую через запятую, в данном случае округлит до целого числа.*/
+console.log(parseFloat(twelve)); /* команда возвращает десятичное число, 
+в данном случае откинет строку "px" */

@@ -1,8 +1,7 @@
-let money, time;
-time = prompt('Введите дату в формате YYYY-MM-DD', '');
-money = +prompt("Ваш бюджет на месяц?", '');
-if (isNaN(money) || money == '' || money == null) {
-  console.log('chlen');
-} else {
-console.log(money);
-};
+let age = document.getElementById('age');
+ 
+function showUser(surname, name) {
+         alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+}
+ 
+showUser.apply(age, ["Горький","Максим"]);
